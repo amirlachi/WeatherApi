@@ -19,3 +19,30 @@ This is a .NET Web API that returns current weather and air pollution data for a
 ```bash
 git clone https://github.com/amirlachi/WeatherApi.git
 cd WeatherApi
+```
+
+2. Configure API key (one of these):
+- Using environment variable (recommended):
+```bash
+# Linux / macOS
+export OpenWeather__ApiKey="93af83931a38b3f56305041db555b35b"
+# Windows (PowerShell)
+$env:OpenWeather__ApiKey="93af83931a38b3f56305041db555b35b"
+```
+
+- Or using dotnet user-secrets (in project folder):
+```bash
+dotnet user-secrets init
+dotnet user-secrets set "OpenWeather:ApiKey" "YOUR_API_KEY"
+```
+
+3. Run:
+```bash
+dotnet run --project src/WeatherApi
+```
+
+4. Example request:
+```bash
+GET https://localhost:5001/api/weather/Tehran
+```
+
