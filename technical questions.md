@@ -59,6 +59,7 @@ public record WeatherResponse(
 The test is practical and well-scoped: it asks for integration with a real external API, requires proper configuration and at least one unit test. It effectively evaluates design, error handling, and deliverables. Small improvements could include clearer expectations around deployment or required .NET version.
 
 6) Describe yourself using JSON
+```json
 {
   "name": "Amirreza Lachinani",
   "age": 22,
@@ -66,7 +67,7 @@ The test is practical and well-scoped: it asks for integration with a real exter
   "skills": ["C#", "ASP.NET Core", "SQL Server", "EF Core", "REST APIs"],
   "interests": ["Backend development", "Databases", "Clean Code"]
 }
-
+```
 
 ---
 
