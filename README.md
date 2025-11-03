@@ -46,3 +46,10 @@ dotnet run --project src/WeatherApi
 GET https://localhost:5001/api/weather/Tehran
 ```
 
+Notes & Improvements
+
+- HttpClient configured via IHttpClientFactory with timeout.
+
+- Global exception middleware returns JSON errors.
+
+- Suggestions: add caching, rate-limiting, integration tests, containerization.
