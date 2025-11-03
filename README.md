@@ -33,7 +33,7 @@ $env:OpenWeather__ApiKey="93af83931a38b3f56305041db555b35b"
 - Or using dotnet user-secrets (in project folder):
 ```bash
 dotnet user-secrets init
-dotnet user-secrets set "OpenWeather:ApiKey" "YOUR_API_KEY"
+dotnet user-secrets set "OpenWeather:ApiKey" "93af83931a38b3f56305041db555b35b"
 ```
 
 3. Run:
