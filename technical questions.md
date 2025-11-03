@@ -1,7 +1,7 @@
 
 ---
 
-## 2) `Answers to technical questions.md`
+## 2) `Answers to technical questions`
 ```markdown
 # Answers to technical questions
 
@@ -33,3 +33,53 @@ public record WeatherResponse(
     double Longitude,
     string AirQualityText
 );
+
+3) How do you identify and diagnose a performance issue in production?
+
+- Collect metrics: CPU, memory, GC pauses, request rate, latencies (APM tools like Application Insights/New Relic/Datadog).
+
+- Correlate logs and traces (distributed tracing — OpenTelemetry).
+
+- Reproduce in staging with load tests.
+
+- Use flamegraphs / CPU profiler to find hotspots.
+
+- Inspect database slow queries and missing indexes.
+
+- Mitigations: add caching, tune DB queries, optimize serialization, scale horizontally.
+
+(Have performed these steps in prior projects — used profiling + APM + DB slow query logs.)
+
+4) Last technical book or conference
+
+- Book: Clean Architecture by Robert C. Martin — reinforced boundaries between layers and SOLID practices.
+
+5) Opinion about this technical test
+
+The test is practical and well-scoped: it asks for integration with a real external API, requires proper configuration and at least one unit test. It effectively evaluates design, error handling, and deliverables. Small improvements could include clearer expectations around deployment or required .NET version.
+
+6) Describe yourself using JSON
+{
+  "name": "Amirreza Lachinani",
+  "age": 22,
+  "role": "Backend Developer (C#/.NET)",
+  "skills": ["C#", "ASP.NET Core", "SQL Server", "EF Core", "REST APIs"],
+  "interests": ["Backend development", "Databases", "Clean Code"]
+}
+
+
+---
+
+## 3) `.gitignore`
+
+
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.env
+secrets.json
+**/appsettings.Development.json
