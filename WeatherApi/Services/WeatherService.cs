@@ -26,7 +26,7 @@ namespace WeatherApi.Services
                 throw new ArgumentException("City name must not be empty.");
 
             var weatherUrl = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={_apiKey}&units=metric";
-            _logger.LogInformation("🌦 Fetching weather for {City}", city);
+            _logger.LogInformation("Fetching weather for {City}", city);
 
             var weatherResult = await GetJsonAsync<OpenWeatherResponse>(weatherUrl);
             if (weatherResult == null)
@@ -36,7 +36,7 @@ namespace WeatherApi.Services
             double lon = weatherResult.Coord.Lon;
 
             var airUrl = $"https://api.openweathermap.org/data/2.5/air_pollution?lat={lat.ToString(CultureInfo.InvariantCulture)}&lon={lon.ToString(CultureInfo.InvariantCulture)}&appid={_apiKey}";
-            _logger.LogInformation("💨 Fetching air pollution data for coordinates ({Lat}, {Lon})", lat, lon);
+            _logger.LogInformation("Fetching air pollution data for coordinates ({Lat}, {Lon})", lat, lon);
 
             var airResult = await GetJsonAsync<AirPollutionResponse>(airUrl);
             if (airResult == null || airResult.List.Count == 0)
