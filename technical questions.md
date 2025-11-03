@@ -68,19 +68,3 @@ The test is practical and well-scoped: it asks for integration with a real exter
   "interests": ["Backend development", "Databases", "Clean Code"]
 }
 ```
-
----
-
-## 3) `.gitignore`
-
-
-bin/
-obj/
-.vs/
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
-.env
-secrets.json
-**/appsettings.Development.json
