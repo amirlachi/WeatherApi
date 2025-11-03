@@ -4,7 +4,7 @@
 ## 2) `Answers to technical questions`
 ```markdown
 # Answers to technical questions
-
+```
 ## 1) How much time did you spend on this task?
 I spent approximately **6 hours** implementing, testing and documenting the API.
 
@@ -33,7 +33,7 @@ public record WeatherResponse(
     double Longitude,
     string AirQualityText
 );
-
+```
 3) How do you identify and diagnose a performance issue in production?
 
 - Collect metrics: CPU, memory, GC pauses, request rate, latencies (APM tools like Application Insights/New Relic/Datadog).
